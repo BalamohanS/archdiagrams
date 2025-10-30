@@ -1,0 +1,160 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram name="API High Level Design" id="api-design">
+    <mxGraphModel dx="1708" dy="957" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend-box" value="Legend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1400" y="40" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-northbound" value="Northbound Interface (Consumer to Platform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="1410" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-southbound" value="Southbound Interface (Platform to Provider)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="1410" y="110" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-internal" value="Internal Components" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="1410" y="150" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-external" value="&lt;b&gt;API Consumers&lt;/b&gt;&lt;br&gt;(External)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-internal" value="&lt;b&gt;API Consumers&lt;/b&gt;&lt;br&gt;(Internal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="40" y="500" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="platform-container" value="BC API Platform" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#0066cc;align=left;verticalAlign=top;fontStyle=1;fontSize=14;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="1160" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-box" value="API Gateway&lt;br&gt;(Internal Network Traffic Gateway)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="80" width="1080" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="traffic-limiting" value="&lt;b&gt;Traffic Limiting / Throttling&lt;/b&gt;&lt;br&gt;API Rate Limits, Quota, Throttle etc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="260" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="routing" value="&lt;b&gt;Routing&lt;/b&gt;&lt;br&gt;BGP, switches etc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="500" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mutual-auth" value="&lt;b&gt;Mutual Authentication (m-LS)&lt;/b&gt;&lt;br&gt;Authorization based connection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="740" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="service-logging" value="&lt;b&gt;Service &amp; Logging&lt;/b&gt;&lt;br&gt;API Traffic Logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="260" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="transaction-protection" value="&lt;b&gt;API Transaction Protection&lt;/b&gt;&lt;br&gt;File Upload/Anti-virus Scanning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="980" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ip-whitelist" value="&lt;b&gt;IP Whitelisting&lt;/b&gt;&lt;br&gt;Restrict IP Traffic for Whitelisted IPs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="980" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-portal" value="&lt;b&gt;Developer Portal&lt;/b&gt;&lt;br&gt;Expand Ideas (Clients, Regulators, Partners)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="400" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="content-mgmt" value="&lt;b&gt;Content Management&lt;/b&gt;&lt;br&gt;Expertise, forms and collateral upload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="260" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hosting-cert" value="&lt;b&gt;Hosting &amp; Certification&lt;/b&gt;&lt;br&gt;Test case execution, testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="260" y="590" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-registry" value="&lt;b&gt;API Registry&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="640" y="400" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-standards" value="&lt;b&gt;API Standards Management&lt;/b&gt;&lt;br&gt;API contracts, versioning, reusable logic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="660" y="490" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics" value="&lt;b&gt;Analytics &amp; Reporting&lt;/b&gt;&lt;br&gt;API adoption, performance, cost metrics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="660" y="580" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-catalogue" value="&lt;b&gt;API Catalogue&lt;/b&gt;&lt;br&gt;Provides a catalogue of Available APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="440" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-docs" value="&lt;b&gt;API Documentation&lt;/b&gt;&lt;br&gt;Detailed API documentation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="440" y="590" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-discovery" value="&lt;b&gt;API Discovery&lt;/b&gt;&lt;br&gt;Enables developers to search APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="240" y="670" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-access" value="&lt;b&gt;API Access&lt;/b&gt;&lt;br&gt;Platform app for end users" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="440" y="670" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-sandbox" value="&lt;b&gt;API Sandbox&lt;/b&gt;&lt;br&gt;Testing for API consumers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="1020" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="developer-portal" value="&lt;b&gt;Developer Portal&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="840" y="620" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="source-code" value="&lt;b&gt;Source Code Engineering (CLI)&lt;/b&gt;&lt;br&gt;Generate code libraries to test APIs using CLI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="860" y="680" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="distributed" value="&lt;b&gt;Distributed&lt;/b&gt;&lt;br&gt;Pre-configured docker images" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="1020" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-listings" value="&lt;b&gt;API Listings (DCLD)&lt;/b&gt;&lt;br&gt;Performs API specification analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="240" y="800" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="security-testing" value="&lt;b&gt;Security Testing (DCLD)&lt;/b&gt;&lt;br&gt;API test (code level testing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="240" y="880" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sandbox-env" value="&lt;b&gt;Sandbox&lt;/b&gt;&lt;br&gt;API testing and environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="240" y="960" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="contract-testing" value="&lt;b&gt;Contract Testing (PCTS)&lt;/b&gt;&lt;br&gt;Ensure APIs published meet standards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="240" y="1040" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-initiator" value="&lt;b&gt;API Initiator (Streams)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="640" y="800" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="policy-enforcement" value="&lt;b&gt;Policy Enforcement (Trust SPCF)&lt;/b&gt;&lt;br&gt;Enforce policies such as security, compliance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="660" y="860" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="common-platform" value="&lt;b&gt;Common Platform&lt;/b&gt;&lt;br&gt;Middleware components for transformation, authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="660" y="940" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-spec" value="&lt;b&gt;API Specification&lt;/b&gt;&lt;br&gt;API definitions and structure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="660" y="1020" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="api-manifest" value="&lt;b&gt;API Manifest&lt;/b&gt;&lt;br&gt;API metadata and config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="780" y="1020" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="provider-external" value="&lt;b&gt;API Providers&lt;/b&gt;&lt;br&gt;(External)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="provider-internal" value="&lt;b&gt;API Providers&lt;/b&gt;&lt;br&gt;(Internal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="620" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="api-guardian" value="&lt;b&gt;API Guardian&lt;/b&gt;&lt;br&gt;API Security posture and testing platform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="1150" width="1160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="identity-platform" value="&lt;b&gt;BC Identity Platform&lt;/b&gt;&lt;br&gt;Provides identity &amp; access management for authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="1240" width="1160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ado" value="&lt;b&gt;ADO&lt;/b&gt;&lt;br&gt;Provides continuous integration and deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="200" y="1330" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cop" value="&lt;b&gt;Capital Observability Platform (COP)&lt;/b&gt;&lt;br&gt;Collects metrics and provides system visibility" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="520" y="1330" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gdp" value="&lt;b&gt;Global Data Platform (GDP)&lt;/b&gt;&lt;br&gt;Data virtualization platform for business intelligence" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="880" y="1330" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#0066cc;dashed=1;dashPattern=8 8;flowAnimation=1;" parent="1" source="consumer-external" target="gateway-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#0066cc;dashed=1;dashPattern=8 8;flowAnimation=1;" parent="1" source="consumer-internal" target="dev-portal" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;dashed=1;dashPattern=8 8;flowAnimation=1;" parent="1" source="api-registry" target="provider-external" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;dashed=1;dashPattern=8 8;flowAnimation=1;" parent="1" source="developer-portal" target="provider-internal" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;dashed=1;flowAnimation=1;" parent="1" source="gateway-box" target="api-registry" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#666666;dashed=1;flowAnimation=1;" parent="1" source="api-registry" target="api-initiator" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
